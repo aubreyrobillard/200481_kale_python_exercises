@@ -61,7 +61,8 @@ class Fighter:
         self.defence = defence
         
     def attack(self, opponent):
-        damage = random.randrange(0, (self.strength - opponent.defence))
+        damage = round(self.strength * random.random()) - opponent.defence
+        # damage = random.randrange(0, (self.strength - opponent.defence))
         print(damage)
         if (damage < 0):
             damage = 0
